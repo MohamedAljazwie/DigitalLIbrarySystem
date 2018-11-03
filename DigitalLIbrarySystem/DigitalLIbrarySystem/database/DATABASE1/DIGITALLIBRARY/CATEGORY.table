@@ -1,0 +1,486 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>CATEGORY</name>
+  <columns>
+    <column>
+      <name>CATEGORY_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CATEGORY_NAME</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">100</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>DESCRIPTION</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">4000</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>DESCRIPTION</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>SUPER_CATEGORY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SUPER_CATEGORY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CATEGORY_CATID_NK</name>
+      <checkCondition>&quot;CATEGORY_ID&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_CATID_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CATEGORY_CATNAME_NK</name>
+      <checkCondition>&quot;CATEGORY_NAME&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_CATNAME_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>CATEGORY_ID_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>SUPER_CATEGORY</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CATEGORY</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID_FK</name>
+            <childObjectNames>
+              <childObjectName>SUPER_CATEGORY</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CATEGORY_ID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>CATEGORY_ID_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CATEGORY</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>CATEGORY_ID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID_PK</name>
+            <childObjectNames>
+              <childObjectName>CATEGORY_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>CATEGORY_CATNAME_UK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY_NAME</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CATEGORY</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>CATEGORY_CATNAME_UK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_CATNAME_UK</name>
+            <childObjectNames>
+              <childObjectName>CATEGORY_NAME</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>UniqueConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>CATEGORY_CATNAME_UK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>CATEGORY_NAME</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>CATEGORY_NAME</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>CATEGORY_CATNAME_UK</name>
+                  <identifier class="java.math.BigDecimal">16906</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>CATEGORY</name>
+                    <identifier class="java.math.BigDecimal">16789</identifier>
+                    <schemaName>DIGITALLIBRARY</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DIGITALLIBRARY</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_CATNAME_UK</name>
+            <identifier class="java.math.BigDecimal">16906</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>0</maxExtent>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.NameBasedID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DIGITALLIBRARY</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>CATEGORY_ID_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>CATEGORY_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>CATEGORY_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>CATEGORY_ID_PK</name>
+                  <identifier class="java.math.BigDecimal">16790</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>CATEGORY</name>
+                    <identifier class="java.math.BigDecimal">16789</identifier>
+                    <schemaName>DIGITALLIBRARY</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DIGITALLIBRARY</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID_PK</name>
+            <identifier class="java.math.BigDecimal">16790</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>CATEGORY</name>
+              <identifier class="java.math.BigDecimal">16789</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>0</maxExtent>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.NameBasedID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DIGITALLIBRARY</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DigitalLibreary</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>CATEGORY</name>
+        <identifier class="java.math.BigDecimal">16789</identifier>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <tablespaceID class="oracle.javatools.db.NameBasedID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DIGITALLIBRARY</name>
+  </schema>
+</table>

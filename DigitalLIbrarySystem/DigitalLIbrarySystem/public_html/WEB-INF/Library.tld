@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'windows-1256'?>
+<taglib xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+    <display-name>Library</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>Library</short-name>
+    <uri>https://java.sun.com/jsp/library/tags</uri>
+    
+    
+    
+    <!--   View Tag-->
+    <tag>
+        <description>this tag to display for Specfied actor in library</description>
+        <name>view</name>
+        <tag-class>org.sun.Library.Tags.View</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>role</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <description>this tag to display for any Data  in library</description>
+        <name>viewAll</name>
+        <tag-class>org.sun.Library.Tags.ViewTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>role</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+          <attribute>
+            <name>reportDate</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+         </attribute>
+         <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    
+    
+    <!--   Search Tag-->
+    <tag>
+        <description>this tag to search for any data  in library</description>
+        <name>search</name>
+        <tag-class>org.sun.Library.Tags.SearchTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>role</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+       </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    
+    
+    
+    <tag>
+        <description>this tag to search for book data  in library</description>
+        <name>books</name>
+        <tag-class>org.sun.Library.Tags.Books</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    
+    
+    <tag>
+        <description>this tag to search for Students data  in library</description>
+        <name>students</name>
+        <tag-class>org.sun.Library.Tags.Students</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    
+    
+        <tag>
+        <description>this tag to search for IssueBooks data  in library</description>
+        <name>issueBooks</name>
+        <tag-class>org.sun.Library.Tags.IssuesBooks</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>isbn</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>nationalID</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    
+    
+    <!--   MyIteratio Tag-->
+    <tag>
+        <name>iterate</name>
+        <tag-class>org.sun.Library.Tags.MyIterationTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>employeeList</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

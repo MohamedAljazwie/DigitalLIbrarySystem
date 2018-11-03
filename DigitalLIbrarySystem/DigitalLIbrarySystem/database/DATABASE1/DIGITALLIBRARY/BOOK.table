@@ -1,0 +1,884 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>BOOK</name>
+  <columns>
+    <column>
+      <name>BOOK_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>BOOK_ISBN</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ISBN</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>BOOK_TITLE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">200</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_TITLE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>SUBJECT</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">200</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>SUBJECT</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>PRICE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRICE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CATEGORY_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CATEGORY_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>PUBLISH_DATE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUBLISH_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>QUANTITY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>AVAILABLE_BOOKS</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>AVAILABLE_BOOKS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>BORROWED_BOOKS</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BORROWED_BOOKS</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>REGISTERED_DATE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <default class="java.lang.String">TO_CHAR(SYSDATE,&apos;dd-MONTH-yyyy&apos;)</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>REGISTERED_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK BORROWED_NK</name>
+      <checkCondition>&quot;BORROWED_BOOKS&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK BORROWED_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_AVAILABILITY_NK</name>
+      <checkCondition>&quot;AVAILABLE_BOOKS&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_AVAILABILITY_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_BOOKID_NK</name>
+      <checkCondition>&quot;BOOK_ID&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_BOOKID_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_BOOKISBN_NK</name>
+      <checkCondition>&quot;BOOK_ISBN&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_BOOKISBN_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_BOOK_TITLE_NK</name>
+      <checkCondition>&quot;BOOK_TITLE&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_BOOK_TITLE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_CATEGORYID_NK</name>
+      <checkCondition>&quot;CATEGORY_ID&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_CATEGORYID_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_PRICE_NK</name>
+      <checkCondition>&quot;PRICE&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_PRICE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_PUBLISHDATE_NK</name>
+      <checkCondition>&quot;PUBLISH_DATE&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_PUBLISHDATE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_QUANTITY_NK</name>
+      <checkCondition>&quot;QUANTITY&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_QUANTITY_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_REGISTERED_DATE_NK</name>
+      <checkCondition>&quot;REGISTERED_DATE&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_REGISTERED_DATE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>BOOK_SUBJECT_NK</name>
+      <checkCondition>&quot;SUBJECT&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_SUBJECT_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>BOOK_CATID_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_CATID_FK</name>
+            <childObjectNames>
+              <childObjectName>CATEGORY_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CATEGORY_ID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CATEGORY</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>BOOK_ID_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>BOOK_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>BOOK_ID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>BOOK</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ID_PK</name>
+            <childObjectNames>
+              <childObjectName>BOOK_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>BOOK_ISBN_UK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>BOOK_ISBN</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>BOOK_ISBN_UK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>BOOK</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ISBN_UK</name>
+            <childObjectNames>
+              <childObjectName>BOOK_ISBN</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>UniqueConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>BOOK_ID_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>BOOK_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>BOOK_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_ID_PK</name>
+                  <identifier class="java.math.BigDecimal">16782</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">16781</identifier>
+                    <schemaName>DIGITALLIBRARY</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DIGITALLIBRARY</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ID_PK</name>
+            <identifier class="java.math.BigDecimal">16782</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>0</maxExtent>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.NameBasedID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DIGITALLIBRARY</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>BOOK_ISBN_UK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>BOOK_ISBN</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>BOOK_ISBN</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_ISBN_UK</name>
+                  <identifier class="java.math.BigDecimal">16783</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">16781</identifier>
+                    <schemaName>DIGITALLIBRARY</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DIGITALLIBRARY</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_ISBN_UK</name>
+            <identifier class="java.math.BigDecimal">16783</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">16781</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>0</maxExtent>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.NameBasedID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DIGITALLIBRARY</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DigitalLibreary</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>BOOK</name>
+        <identifier class="java.math.BigDecimal">16781</identifier>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <tablespaceID class="oracle.javatools.db.NameBasedID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DIGITALLIBRARY</name>
+  </schema>
+</table>

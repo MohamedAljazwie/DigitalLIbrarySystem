@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>LMSLOGINID</name>
+  <cacheFlag>false</cacheFlag>
+  <cycleFlag>false</cycleFlag>
+  <incrementBy>1</incrementBy>
+  <lastNumber>101</lastNumber>
+  <maxValue>999999999999999999999999999</maxValue>
+  <minValue>1</minValue>
+  <orderFlag>true</orderFlag>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DigitalLibreary</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>LMSLOGINID</name>
+        <identifier class="java.math.BigDecimal">16666</identifier>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>SEQUENCE</type>
+      </value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DIGITALLIBRARY</name>
+  </schema>
+</sequence>

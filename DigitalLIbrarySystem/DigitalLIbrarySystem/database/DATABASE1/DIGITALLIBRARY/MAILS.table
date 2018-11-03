@@ -1,0 +1,414 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>MAILS</name>
+  <columns>
+    <column>
+      <name>MAIL_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAIL_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>STUDENT_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>STUDENT_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>TITLE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">100</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>TITLE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CONTENT</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">4000</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>CONTENT</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>MAILS_MAIL_ID_NK</name>
+      <checkCondition>&quot;MAIL_ID&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_MAIL_ID_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>MAILS_MESSAGE_NK</name>
+      <checkCondition>&quot;CONTENT&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_MESSAGE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>MAILS_STUDENT_ID_NK</name>
+      <checkCondition>&quot;STUDENT_ID&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_STUDENT_ID_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>MAILS_TITLE_NK</name>
+      <checkCondition>&quot;TITLE&quot; IS NOT NULL</checkCondition>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_TITLE_NK</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>CheckConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>MAILS_STUDENT_ID_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>STUDENT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAILS</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_STUDENT_ID_FK</name>
+            <childObjectNames>
+              <childObjectName>STUDENT_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>STUDENT_STID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>STUDENT</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>MAILS_ID_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>MAIL_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAILS</name>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>MAILS_ID_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAILS</name>
+          <schemaName>DIGITALLIBRARY</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_ID_PK</name>
+            <childObjectNames>
+              <childObjectName>MAIL_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>MAILS_ID_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>MAIL_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>MAIL_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>MAILS_ID_PK</name>
+                  <identifier class="java.math.BigDecimal">16800</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>MAILS</name>
+                    <identifier class="java.math.BigDecimal">16799</identifier>
+                    <schemaName>DIGITALLIBRARY</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>DIGITALLIBRARY</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>MAILS_ID_PK</name>
+            <identifier class="java.math.BigDecimal">16800</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>MAILS</name>
+              <identifier class="java.math.BigDecimal">16799</identifier>
+              <schemaName>DIGITALLIBRARY</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>DIGITALLIBRARY</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initialExtent>65536</initialExtent>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <maxExtent>0</maxExtent>
+            <minExtent>1</minExtent>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.NameBasedID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <schema>
+        <name>DIGITALLIBRARY</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">DigitalLibreary</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>MAILS</name>
+        <identifier class="java.math.BigDecimal">16799</identifier>
+        <schemaName>DIGITALLIBRARY</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <percentFree>10</percentFree>
+        <tablespaceID class="oracle.javatools.db.NameBasedID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DIGITALLIBRARY</name>
+  </schema>
+</table>

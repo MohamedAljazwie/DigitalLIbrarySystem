@@ -1,0 +1,5829 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html">
+<META NAME="Generator" CONTENT="TOAD">
+<LINK REL="stylesheet" TYPE="text/css" HREF="digitallibrary.css">
+<TITLE>DIGITALLIBRARY@XE</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A>
+<P>&nbsp;</P>
+<CENTER>
+<H1>Schema DIGITALLIBRARY in Database XE</H1>
+</CENTER>
+<P ALIGN="CENTER">Oracle Version 10.2.0.1.0</P>
+<CENTER>
+<I><B>As Of 23/10/2016 12:57:28 ã</B></I>
+</CENTER>
+<P>&nbsp;</P>
+<P ALIGN="CENTER">--------------------- Jump to ---------------------</P>
+<P ALIGN="CENTER">
+<A HREF="#Clusters">Clusters</A> ---- 
+      <A HREF="#Dimensions">Dimensions</A> ---- 
+      <A HREF="#Functions">Functions</A> ---- 
+      <A HREF="#Indexes">Indexes</A>
+</P>
+<P ALIGN="CENTER">
+<A HREF="#Jobs">Jobs</A> ---- 
+      <A HREF="#Libraries">Libraries</A> ---- 
+      <A HREF="#Packages">Packages</A> ---- 
+      <A HREF="#PolicyGroups">Policy Groups</A>
+</P>
+<P ALIGN="CENTER">
+<A HREF="#Policies">Policies</A> ---- 
+      <A HREF="#Procedures">Procedures</A> ---- 
+      <A HREF="#Queues">Queues</A> ---- 
+      <A HREF="#QueueTables">Queue Tables</A>
+</P>
+<P ALIGN="CENTER">
+<A HREF="#RefreshGroups">Refresh Groups</A> ---- 
+      <A HREF="#SchedulerPrograms">Scheduler Programs</A> ---- 
+      <A HREF="#SchedulerJobs">Scheduler Jobs</A> ---- 
+      <A HREF="#SchedulerSchedules">Scheduler Schedules</A>
+</P>
+<P ALIGN="CENTER">
+<A HREF="#Sequences">Sequences</A> ---- 
+      <A HREF="#SnapshotLogs">Snapshot Logs</A> ---- 
+      <A HREF="#Snapshots">Snapshots</A> ---- 
+      <A HREF="#Synonyms">Synonyms</A>
+</P>
+<P ALIGN="CENTER">
+<A HREF="#Tables">Tables</A> ---- 
+      <A HREF="#Triggers">Triggers</A> ---- 
+      <A HREF="#Types">Types</A> ---- 
+      <A HREF="#Views">Views</A>
+</P>
+<P>&nbsp;</P>
+<H2><A NAME="ObjectCounts"></A>Object Counts</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Object Type</TH>
+        <TH>Object Count</TH>
+        <TH>Misc. Details</TH>
+</TR>
+<TR>
+<TD>Sys Privs Granted to Roles</TD>
+<TD class="rt">9</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>Sys Privs Granted to User</TD>
+<TD class="rt">12</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>Roles Granted to User</TD>
+<TD class="rt">2</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>Indexes</TD>
+<TD class="rt">30</TD>
+<TD>36 Columns</TD>
+</TR>
+<TR>
+<TD>Queues</TD>
+<TD class="rt">15</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>Sequences</TD>
+<TD class="rt">11</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD>Tables</TD>
+<TD class="rt">18</TD>
+<TD>78 Columns</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>104 Constraints</TD>
+</TR>
+<TR>
+<TD>Triggers</TD>
+<TD class="rt">11</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="UserInfo"></A>User Info</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Default Tablespace</TH>
+        <TH>Temporary Tablespace</TH>
+        <TH>Profile</TH>
+        <TH>Account Status</TH>
+        <TH>External Name</TH>
+        <TH>Initial Resource Group</TH>
+        <TH># Sys Privs</TH>
+        <TH># TS Quotas</TH>
+        <TH># Roles</TH>
+        <TH># Obj Privs</TH>
+</TR>
+<TR>
+<TD>USERS</TD>
+<TD>TEMP</TD>
+<TD>DEFAULT</TD>
+<TD>OPEN</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT_CONSUMER_GROUP</TD>
+<TD class="rt">12</TD>
+<TD class="rt">0</TD>
+<TD class="rt">2</TD>
+<TD class="rt">0</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="ProfileInfo"></A>Profile Info</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Parameter</TH>
+        <TH>Value</TH>
+</TR>
+<TR>
+<TD>Profile Name</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD>Composite Limit</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Connect Time</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>CPU per Session</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Failed Login Attempts</TD>
+<TD>10</TD>
+</TR>
+<TR>
+<TD>Idle Time</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Logical Reads per Session</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Grace Time</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Lifetime</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Lock Time</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Reuse Max</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Reuse Time</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Password Verify Function</TD>
+<TD>NULL</TD>
+</TR>
+<TR>
+<TD>Private SGA</TD>
+<TD>UNLIMITED</TD>
+</TR>
+<TR>
+<TD>Sessions per User</TD>
+<TD>UNLIMITED</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="ObjectPrivs"></A>User DIGITALLIBRARY has not been granted any object privileges.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="SysPrivs"></A>System Privileges</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Privilege</TH>
+        <TH>Admin Option?</TH>
+</TR>
+<TR>
+<TD>CREATE TYPE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE TRIGGER</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE PUBLIC SYNONYM</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE TABLE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE MATERIALIZED VIEW</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE PROCEDURE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE DATABASE LINK</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE SEQUENCE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE ROLE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>UNLIMITED TABLESPACE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE SYNONYM</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE VIEW</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="TSQuotas"></A>User DIGITALLIBRARY does not have any specific tablespace quotas.</H2>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Roles"></A>Granted Roles</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Role Name</TH>
+        <TH>Default Role?</TH>
+        <TH>Admin Option?</TH>
+</TR>
+<TR>
+<TD><A HREF="#ROLRESOURCE">RESOURCE</A></TD>
+<TD>Yes</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD><A HREF="#ROLCONNECT">CONNECT</A></TD>
+<TD>Yes</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="Types"></A>Schema DIGITALLIBRARY does not contain any types.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Tables"></A>Tables</H2>
+<A HREF="#Top">Top</A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Table Name</TH>
+        <TH># of Cols</TH>
+        <TH># of Indexes</TH>
+        <TH>Size</TH>
+        <TH>Tablespace</TH>
+        <TH># of Extents</TH>
+        <TH>Initial Ext</TH>
+        <TH>Next Ext</TH>
+        <TH>Pct Inc.</TH>
+        <TH>Min Exts</TH>
+        <TH>Max Exts</TH>
+        <TH>Freelists</TH>
+        <TH>Freelist Groups</TH>
+        <TH>Buffer Pool</TH>
+        <TH>Comment</TH>
+</TR>
+<TR>
+<TD><A name="TBLSUMADDRESS" HREF="#TBLADDRESS">ADDRESS</A></TD>
+<TD class="rt">3</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMAUTHOR" HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD class="rt">4</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMAUTHOR_PHONE" HREF="#TBLAUTHOR_PHONE">AUTHOR_PHONE</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMBOOK" HREF="#TBLBOOK">BOOK</A></TD>
+<TD class="rt">11</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMBOOK_AUTHOR" HREF="#TBLBOOK_AUTHOR">BOOK_AUTHOR</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMBOOK_PUBLISHER" HREF="#TBLBOOK_PUBLISHER">BOOK_PUBLISHER</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMCATEGORY" HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD class="rt">4</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMFINE" HREF="#TBLFINE">FINE</A></TD>
+<TD class="rt">7</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMISSUES_BOOK" HREF="#TBLISSUES_BOOK">ISSUES_BOOK</A></TD>
+<TD class="rt">7</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMLMSLOGIN" HREF="#TBLLMSLOGIN">LMSLOGIN</A></TD>
+<TD class="rt">4</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMMAILS" HREF="#TBLMAILS">MAILS</A></TD>
+<TD class="rt">4</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMPUBLISHER" HREF="#TBLPUBLISHER">PUBLISHER</A></TD>
+<TD class="rt">4</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMPUBLISHER_PHONE" HREF="#TBLPUBLISHER_PHONE">PUBLISHER_PHONE</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMQUALIFICATIONS" HREF="#TBLQUALIFICATIONS">QUALIFICATIONS</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMRETURN_BOOK" HREF="#TBLRETURN_BOOK">RETURN_BOOK</A></TD>
+<TD class="rt">7</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMSTUDENT" HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD class="rt">9</TD>
+<TD class="rt">4</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMSTUDENT_PHONE" HREF="#TBLSTUDENT_PHONE">STUDENT_PHONE</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">2</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="TBLSUMTEST" HREF="#TBLTEST">TEST</A></TD>
+<TD class="rt">2</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="Views"></A>Schema DIGITALLIBRARY does not contain any views.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Snapshots"></A>Schema DIGITALLIBRARY does not contain any snapshots.</H2>
+<H2><A NAME="RefreshGroups"></A>Schema DIGITALLIBRARY does not contain any refresh group.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="SnapshotLogs"></A>Schema DIGITALLIBRARY does not contain any Snapshot Logs.</H2>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Sequences"></A>Sequences</H2>
+<A HREF="#Top">Top</A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Sequence Name</TH>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSADDRESSID">LMSADDRESSID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>100</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSAUTHORID">LMSAUTHORID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>132</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSBOOKID">LMSBOOKID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>1121</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSCATEGORYID">LMSCATEGORYID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>140</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSFINEID">LMSFINEID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>10014</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSIDDUEWSBOOKID">LMSIDDUEWSBOOKID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>1050</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSLOGINID">LMSLOGINID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>101</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSMAILSID">LMSMAILSID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>100</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSPUBLISHERID">LMSPUBLISHERID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>106</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSRETURNBOOKID">LMSRETURNBOOKID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>1049</TD>
+</TR>
+<TR>
+<TD><A HREF="#SEQLMSSTUDENTID">LMSSTUDENTID</A></TD>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">1</TD>
+<TD>1102</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Triggers"></A>Triggers</H2>
+<A HREF="#Top">Top</A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Type</TH>
+        <TH>Event</TH>
+        <TH>Base Obj. Type</TH>
+        <TH>Base Object</TH>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_LMSLOGIN">BI_LMSLOGIN</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.LMSLOGIN</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_ADDRESS">BI_ADDRESS</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.ADDRESS</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_PUBLISHER">BI_PUBLISHER</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.PUBLISHER</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_CATEGORY">BI_CATEGORY</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.CATEGORY</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_STUDENT">BI_STUDENT</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.STUDENT</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_AUTHOR">BI_AUTHOR</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.AUTHOR</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_MAILS">BI_MAILS</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.MAILS</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_FINE">BI_FINE</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.FINE</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_ISSUESBOOK">BI_ISSUESBOOK</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.ISSUES_BOOK</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_RETURNBOOK">BI_RETURNBOOK</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.RETURN_BOOK</TD>
+</TR>
+<TR>
+<TD><A HREF="#TRGBI_BOOK">BI_BOOK</A></TD>
+<TD>BEFORE EACH ROW</TD>
+<TD>INSERT</TD>
+<TD>Table</TD>
+<TD>DIGITALLIBRARY.BOOK</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Indexes"></A>Indexes</H2>
+<A HREF="#Top">Top</A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Index Name</TH>
+        <TH>Index Type</TH>
+        <TH>Unique?</TH>
+        <TH>Table Owner</TH>
+        <TH>Table Name</TH>
+        <TH>Columns</TH>
+        <TH>Size (Mb)</TH>
+        <TH>Tablespace</TH>
+        <TH># of Extents</TH>
+        <TH>Initial Ext</TH>
+        <TH>Next Ext</TH>
+        <TH>Pct Inc.</TH>
+        <TH>Min Exts</TH>
+        <TH>Max Exts</TH>
+        <TH>Freelists</TH>
+        <TH>Freelist Groups</TH>
+        <TH>Buffer Pool</TH>
+</TR>
+<TR>
+<TD><A NAME="IDX1ADDRESS_ID_PK" HREF="#IDX2ADDRESS_ID_PK">ADDRESS_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLADDRESS">ADDRESS</A></TD>
+<TD>ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1AUTHOR_AUTHEMAIL_UK" HREF="#IDX2AUTHOR_AUTHEMAIL_UK">AUTHOR_AUTHEMAIL_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD>AUTHOR_EMAIL</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1AUTHOR_AUTHID_PK" HREF="#IDX2AUTHOR_AUTHID_PK">AUTHOR_AUTHID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD>AUTHOR_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1AUTHOR_PHONE_NUMBER_UK" HREF="#IDX2AUTHOR_PHONE_NUMBER_UK">AUTHOR_PHONE_NUMBER_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR_PHONE">AUTHOR_PHONE</A></TD>
+<TD>PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1AUTHOR_PHONE_PK" HREF="#IDX2AUTHOR_PHONE_PK">AUTHOR_PHONE_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR_PHONE">AUTHOR_PHONE</A></TD>
+<TD>AUTHOR_ID, PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1BOOK_AUTHOR_PK" HREF="#IDX2BOOK_AUTHOR_PK">BOOK_AUTHOR_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_AUTHOR">BOOK_AUTHOR</A></TD>
+<TD>BOOK_ID, AUTHOR_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1BOOK_ID_PK" HREF="#IDX2BOOK_ID_PK">BOOK_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>BOOK_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1BOOK_ISBN_UK" HREF="#IDX2BOOK_ISBN_UK">BOOK_ISBN_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>BOOK_ISBN</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1BOOK_PUBLISHER_PK" HREF="#IDX2BOOK_PUBLISHER_PK">BOOK_PUBLISHER_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_PUBLISHER">BOOK_PUBLISHER</A></TD>
+<TD>BOOK_ID, PUBLISHER_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1CATEGORY_CATNAME_UK" HREF="#IDX2CATEGORY_CATNAME_UK">CATEGORY_CATNAME_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD>CATEGORY_NAME</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1CATEGORY_ID_PK" HREF="#IDX2CATEGORY_ID_PK">CATEGORY_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD>CATEGORY_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1FINE_ID_PK" HREF="#IDX2FINE_ID_PK">FINE_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLFINE">FINE</A></TD>
+<TD>FINE_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1FINE_RETURNBOOK_ID_NK" HREF="#IDX2FINE_RETURNBOOK_ID_NK">FINE_RETURNBOOK_ID_NK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLFINE">FINE</A></TD>
+<TD>RETURN_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1ISSUES_BOOK_ID_PK" HREF="#IDX2ISSUES_BOOK_ID_PK">ISSUES_BOOK_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLISSUES_BOOK">ISSUES_BOOK</A></TD>
+<TD>ISSUE_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1LMSLOGIN_PK" HREF="#IDX2LMSLOGIN_PK">LMSLOGIN_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLLMSLOGIN">LMSLOGIN</A></TD>
+<TD>ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1LMSLOGIN_USERNAME_UK" HREF="#IDX2LMSLOGIN_USERNAME_UK">LMSLOGIN_USERNAME_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLLMSLOGIN">LMSLOGIN</A></TD>
+<TD>USERNAME</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1MAILS_ID_PK" HREF="#IDX2MAILS_ID_PK">MAILS_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLMAILS">MAILS</A></TD>
+<TD>MAIL_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1PUBLISHER_PHONE_NUMBER_UK" HREF="#IDX2PUBLISHER_PHONE_NUMBER_UK">PUBLISHER_PHONE_NUMBER_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER_PHONE">PUBLISHER_PHONE</A></TD>
+<TD>PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1PUBLISHER_PHONE_PK" HREF="#IDX2PUBLISHER_PHONE_PK">PUBLISHER_PHONE_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER_PHONE">PUBLISHER_PHONE</A></TD>
+<TD>PUBLISHER_ID, PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1PUBLISHER_PUBEMAIL_UK" HREF="#IDX2PUBLISHER_PUBEMAIL_UK">PUBLISHER_PUBEMAIL_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER">PUBLISHER</A></TD>
+<TD>PUBLISHER_EMAIL</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1PUBLISHER_PUBID_PK" HREF="#IDX2PUBLISHER_PUBID_PK">PUBLISHER_PUBID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER">PUBLISHER</A></TD>
+<TD>PUBLISH_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1QUALIFICATIONS_PK" HREF="#IDX2QUALIFICATIONS_PK">QUALIFICATIONS_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLQUALIFICATIONS">QUALIFICATIONS</A></TD>
+<TD>AUTHOR_ID, QUALIFICATION</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1RETURN_BOOK_ID_PK" HREF="#IDX2RETURN_BOOK_ID_PK">RETURN_BOOK_ID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLRETURN_BOOK">RETURN_BOOK</A></TD>
+<TD>RETURN_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_PHONE_NUMBER_UK" HREF="#IDX2STUDENT_PHONE_NUMBER_UK">STUDENT_PHONE_NUMBER_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT_PHONE">STUDENT_PHONE</A></TD>
+<TD>PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_PHONE_PK" HREF="#IDX2STUDENT_PHONE_PK">STUDENT_PHONE_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT_PHONE">STUDENT_PHONE</A></TD>
+<TD>STUDENT_ID, PHONE_NUMBER</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_STEMAIL_UK" HREF="#IDX2STUDENT_STEMAIL_UK">STUDENT_STEMAIL_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>STUDENT_EMAIL</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_STID_PK" HREF="#IDX2STUDENT_STID_PK">STUDENT_STID_PK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>STUDENT_ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_STNATIONALID_UK" HREF="#IDX2STUDENT_STNATIONALID_UK">STUDENT_STNATIONALID_UK</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>STUDENT_NATIONALID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1STUDENT_USER_NAME_UQ" HREF="#IDX2STUDENT_USER_NAME_UQ">STUDENT_USER_NAME_UQ</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>USER_NAME</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+<TR>
+<TD><A NAME="IDX1TEST_CON" HREF="#IDX2TEST_CON">TEST_CON</A></TD>
+<TD>NORMAL</TD>
+<TD>UNIQUE</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLTEST">TEST</A></TD>
+<TD>ID</TD>
+<TD>64K</TD>
+<TD>USERS</TD>
+<TD class="rt">1</TD>
+<TD>64K</TD>
+<TD>&nbsp;</TD>
+<TD class="rt">0</TD>
+<TD class="rt">1</TD>
+<TD class="rt">2147483645</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>DEFAULT</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Packages"></A>Schema DIGITALLIBRARY does not contain any packages.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Procedures"></A>Schema DIGITALLIBRARY does not contain any procedures.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Functions"></A>Schema DIGITALLIBRARY does not contain any functions.</H2>
+<H2><A NAME="Synonyms"></A>Schema DIGITALLIBRARY does not contain any synonyms.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Dimensions"></A>Schema DIGITALLIBRARY does not contain any dimensions.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Jobs"></A>Schema DIGITALLIBRARY does not contain any jobs.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="SchedulerJobs"></A>Schema DIGITALLIBRARY does not contain any scheduler jobs.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="SchedulerPrograms"></A>Schema DIGITALLIBRARY does not contain any scheduler programs.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="SchedulerSchedules"></A>Schema DIGITALLIBRARY does not contain any scheduler schedules.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Libraries"></A>Schema DIGITALLIBRARY does not contain any Libraries.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="PolicyGroups"></A>Schema DIGITALLIBRARY does not contain any Policy Groups.</H2>
+<P>&nbsp;</P>
+<H2><A NAME="Policies"></A>Schema DIGITALLIBRARY does not contain any Policies.</H2>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="QueueTables"></A>Schema DIGITALLIBRARY does not contain any queue tables.</H2>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A NAME="Queues"></A>Queues</H2>
+<A HREF="#Top">Top</A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Queue Name</TH>
+        <TH>Queue Table</TH>
+        <TH>Queue Type</TH>
+        <TH>Max Retries</TH>
+        <TH>Retry Delay</TH>
+        <TH>Enqueue Enabled</TH>
+        <TH>Dequeue Enabled</TH>
+        <TH>Multiple Consumers</TH>
+        <TH>Retention</TH>
+        <TH># of Subscribers</TH>
+        <TH>Comment</TH>
+</TR>
+<TR>
+<TD><A name="QSUMALERT_QUE">ALERT_QUE</A></TD>
+<TD>ALERT_QT</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>Server Generated Alert Queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_ALERT_QT_E">AQ$_ALERT_QT_E</A></TD>
+<TD>ALERT_QT</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_AQ_EVENT_TABLE_E">AQ$_AQ_EVENT_TABLE_E</A></TD>
+<TD>AQ_EVENT_TABLE</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_AQ$_MEM_MC_E">AQ$_AQ$_MEM_MC_E</A></TD>
+<TD>AQ$_MEM_MC</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_AQ_SRVNTFN_TABLE_E">AQ$_AQ_SRVNTFN_TABLE_E</A></TD>
+<TD>AQ_SRVNTFN_TABLE</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ_EVENT_TABLE_Q">AQ_EVENT_TABLE_Q</A></TD>
+<TD>AQ_EVENT_TABLE</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>CREATING AQ_EVENT_TABLE_Q QUEUE</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_KUPC$DATAPUMP_QUETAB_E">AQ$_KUPC$DATAPUMP_QUETAB_E</A></TD>
+<TD>KUPC$DATAPUMP_QUETAB</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_SCHEDULER$_EVENT_QTAB_E">AQ$_SCHEDULER$_EVENT_QTAB_E</A></TD>
+<TD>SCHEDULER$_EVENT_QTAB</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_SCHEDULER$_JOBQTAB_E">AQ$_SCHEDULER$_JOBQTAB_E</A></TD>
+<TD>SCHEDULER$_JOBQTAB</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ_SRVNTFN_TABLE_Q">AQ_SRVNTFN_TABLE_Q</A></TD>
+<TD>AQ_SRVNTFN_TABLE</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>CREATING AQ_SRVNTFN_TABLE_Q QUEUE</TD>
+</TR>
+<TR>
+<TD><A name="QSUMAQ$_SYS$SERVICE_METRICS_TAB_E">AQ$_SYS$SERVICE_METRICS_TAB_E</A></TD>
+<TD>SYS$SERVICE_METRICS_TAB</TD>
+<TD>EXCEPTION_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>exception queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMSCHEDULER$_EVENT_QUEUE">SCHEDULER$_EVENT_QUEUE</A></TD>
+<TD>SCHEDULER$_EVENT_QTAB</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>3600</TD>
+<TD class="rt">0</TD>
+<TD>Scheduler event queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMSCHEDULER$_JOBQ">SCHEDULER$_JOBQ</A></TD>
+<TD>SCHEDULER$_JOBQTAB</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>Scheduler job queue</TD>
+</TR>
+<TR>
+<TD><A name="QSUMSRVQUEUE">SRVQUEUE</A></TD>
+<TD>AQ$_MEM_MC</TD>
+<TD>NON_PERSISTENT_QUEUE</TD>
+<TD class="rt">0</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>0</TD>
+<TD class="rt">0</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD><A name="QSUMSYS$SERVICE_METRICS">SYS$SERVICE_METRICS</A></TD>
+<TD>SYS$SERVICE_METRICS_TAB</TD>
+<TD>NORMAL_QUEUE</TD>
+<TD class="rt">5</TD>
+<TD class="rt">0</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>No</TD>
+<TD>3600</TD>
+<TD class="rt">0</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2><A NAME="Clusters"></A>Schema DIGITALLIBRARY does not contain any Clusters.</H2>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Roles">Roles</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="ROL1" href="#ROL1"  title="First Role"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#ROL0" title="Previous Role"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#ROL2" title="Next Role"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#ROL2" title="Last Role"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="ROLRESOURCE"></A></H2><H2>---------- Role RESOURCE ----------</H2>
+<H2><A NAME="ObjectPrivs"></A>Role RESOURCE has not been granted any object privileges.</H2>
+<H2><A NAME="SysPrivs"></A>System Privileges</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Privilege</TH>
+        <TH>Admin Option?</TH>
+</TR>
+<TR>
+<TD>CREATE SEQUENCE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE TYPE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE PROCEDURE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE TABLE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE OPERATOR</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE INDEXTYPE</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE TRIGGER</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>CREATE CLUSTER</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+<H2><A NAME="Roles"></A>Role RESOURCE has not been granted any roles.</H2>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Roles">Roles</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="ROL2" href="#ROL1"  title="First Role"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#ROL1" title="Previous Role"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#ROL3" title="Next Role"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#ROL2" title="Last Role"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="ROLCONNECT"></A></H2><H2>---------- Role CONNECT ----------</H2>
+<H2><A NAME="ObjectPrivs"></A>Role CONNECT has not been granted any object privileges.</H2>
+<H2><A NAME="SysPrivs"></A>System Privileges</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Privilege</TH>
+        <TH>Admin Option?</TH>
+</TR>
+<TR>
+<TD>CREATE SESSION</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+<H2><A NAME="Roles"></A>Role CONNECT has not been granted any roles.</H2>
+</CENTER>
+<H2><A NAME="Tables"></A>Tables</H2>
+<A HREF="#Top">Top</A>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab1" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab0" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab2" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLADDRESS"></A></H2><H2>---------- Table ADDRESS ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>CITY</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>COUNTRY</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on ADDRESS</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2ADDRESS_ID_PK" HREF="./digitallibrary.htm#IDX1ADDRESS_ID_PK">ADDRESS_ID_PK</A></TD>
+<TD>ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on ADDRESS</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_ADDRESS">BI_ADDRESS</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSADDRESSID&quot;.nextval into :NEW.ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on ADDRESS</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>ADDRESS_ID_NK</TD>
+<TD>Check</TD>
+<TD>"ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>ID</TD>
+</TR>
+<TR>
+<TD>ADDRESS_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on ADDRESS ---------</i></p>
+<p align="center"><i>--------- No privileges granted on ADDRESS ---------</i></p>
+<p align="center"><i>--------- ADDRESS does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table ADDRESS</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_ADDRESS">BI_ADDRESS</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab2" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab1" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab3" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLAUTHOR"></A></H2><H2>---------- Table AUTHOR ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>AUTHOR_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>AUTHOR_NAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">3</TD>
+<TD>AUTHOR_EMAIL</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>AUTHOR_ADDRESS</TD>
+<TD nowrap>VARCHAR2(400 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on AUTHOR</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2AUTHOR_AUTHEMAIL_UK" HREF="./digitallibrary.htm#IDX1AUTHOR_AUTHEMAIL_UK">AUTHOR_AUTHEMAIL_UK</A></TD>
+<TD>AUTHOR_EMAIL</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2AUTHOR_AUTHID_PK" HREF="./digitallibrary.htm#IDX1AUTHOR_AUTHID_PK">AUTHOR_AUTHID_PK</A></TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on AUTHOR</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_AUTHOR">BI_AUTHOR</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSAUTHORID&quot;.nextval into :NEW.AUTHOR_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on AUTHOR</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>AUTHOR_AUTHEMAIL_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_EMAIL" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_EMAIL</TD>
+</TR>
+<TR>
+<TD>AUTHOR_AUTHLISID_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+<TR>
+<TD>AUTHOR_AUTHNAME_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_NAME" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_NAME</TD>
+</TR>
+<TR>
+<TD>AUTHOR_AUTHID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+<TR>
+<TD>AUTHOR_AUTHEMAIL_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_EMAIL</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on AUTHOR ---------</i></p>
+<p align="center"><i>--------- No privileges granted on AUTHOR ---------</i></p>
+<p align="center"><i>--------- AUTHOR does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table AUTHOR</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR_PHONE">AUTHOR_PHONE</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_AUTHOR">BOOK_AUTHOR</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLQUALIFICATIONS">QUALIFICATIONS</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_AUTHOR">BI_AUTHOR</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab3" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab2" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab4" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLAUTHOR_PHONE"></A></H2><H2>---------- Table AUTHOR_PHONE ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>AUTHOR_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD><B>PHONE_NUMBER</B><SUB>2</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on AUTHOR_PHONE</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2AUTHOR_PHONE_NUMBER_UK" HREF="./digitallibrary.htm#IDX1AUTHOR_PHONE_NUMBER_UK">AUTHOR_PHONE_NUMBER_UK</A></TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2AUTHOR_PHONE_PK" HREF="./digitallibrary.htm#IDX1AUTHOR_PHONE_PK">AUTHOR_PHONE_PK</A></TD>
+<TD>AUTHOR_ID, PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on AUTHOR_PHONE ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on AUTHOR_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>AUTHOR_PHONE_ID_FK</TD>
+<TD>AUTHOR_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>AUTHOR</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on AUTHOR_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>AUTHOR_PHONE_ID_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+<TR>
+<TD>AUTHOR_PHONE_NUMBER_NK</TD>
+<TD>Check</TD>
+<TD>"PHONE_NUMBER" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>AUTHOR_PHONE_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID, PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>AUTHOR_PHONE_NUMBER_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on AUTHOR_PHONE ---------</i></p>
+<p align="center"><i>--------- No privileges granted on AUTHOR_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table AUTHOR_PHONE</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference AUTHOR_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab4" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab3" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab5" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLBOOK"></A></H2><H2>---------- Table BOOK ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>BOOK_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD>BOOK_ISBN</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>BOOK_TITLE</TD>
+<TD nowrap>VARCHAR2(200 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>SUBJECT</TD>
+<TD nowrap>VARCHAR2(200 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">5</TD>
+<TD>PRICE</TD>
+<TD nowrap>VARCHAR2(20 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">6</TD>
+<TD>CATEGORY_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">7</TD>
+<TD>PUBLISH_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">8</TD>
+<TD>QUANTITY</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">9</TD>
+<TD>AVAILABLE_BOOKS</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">10</TD>
+<TD>BORROWED_BOOKS</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">11</TD>
+<TD>REGISTERED_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>TO_CHAR(SYSDATE,'dd-MONTH-yyyy')</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on BOOK</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2BOOK_ID_PK" HREF="./digitallibrary.htm#IDX1BOOK_ID_PK">BOOK_ID_PK</A></TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2BOOK_ISBN_UK" HREF="./digitallibrary.htm#IDX1BOOK_ISBN_UK">BOOK_ISBN_UK</A></TD>
+<TD>BOOK_ISBN</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on BOOK</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_BOOK">BI_BOOK</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSBOOKID&quot;.nextval into :NEW.BOOK_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>BOOK_CATID_FK</TD>
+<TD>CATEGORY_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>CATEGORY</TD>
+<TD>&nbsp;</TD>
+<TD>NO ACTION</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>"BOOK BORROWED_NK"</TD>
+<TD>Check</TD>
+<TD>"BORROWED_BOOKS" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BORROWED_BOOKS</TD>
+</TR>
+<TR>
+<TD>BOOK_AVAILABILITY_NK</TD>
+<TD>Check</TD>
+<TD>"AVAILABLE_BOOKS" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AVAILABLE_BOOKS</TD>
+</TR>
+<TR>
+<TD>BOOK_BOOKID_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_BOOKISBN_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ISBN" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ISBN</TD>
+</TR>
+<TR>
+<TD>BOOK_BOOK_TITLE_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_TITLE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_TITLE</TD>
+</TR>
+<TR>
+<TD>BOOK_CATEGORYID_NK</TD>
+<TD>Check</TD>
+<TD>"CATEGORY_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>CATEGORY_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_PRICE_NK</TD>
+<TD>Check</TD>
+<TD>"PRICE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PRICE</TD>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHDATE_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISH_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISH_DATE</TD>
+</TR>
+<TR>
+<TD>BOOK_QUANTITY_NK</TD>
+<TD>Check</TD>
+<TD>"QUANTITY" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>QUANTITY</TD>
+</TR>
+<TR>
+<TD>BOOK_REGISTERED_DATE_NK</TD>
+<TD>Check</TD>
+<TD>"REGISTERED_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>REGISTERED_DATE</TD>
+</TR>
+<TR>
+<TD>BOOK_SUBJECT_NK</TD>
+<TD>Check</TD>
+<TD>"SUBJECT" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>SUBJECT</TD>
+</TR>
+<TR>
+<TD>BOOK_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_ISBN_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ISBN</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on BOOK ---------</i></p>
+<p align="center"><i>--------- No privileges granted on BOOK ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_AUTHOR">BOOK_AUTHOR</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_PUBLISHER">BOOK_PUBLISHER</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLISSUES_BOOK">ISSUES_BOOK</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLRETURN_BOOK">RETURN_BOOK</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_BOOK">BI_BOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab5" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab4" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab6" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLBOOK_AUTHOR"></A></H2><H2>---------- Table BOOK_AUTHOR ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>BOOK_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtb">2</TD>
+<TD><B>AUTHOR_ID</B><SUB>2</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on BOOK_AUTHOR</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2BOOK_AUTHOR_PK" HREF="./digitallibrary.htm#IDX1BOOK_AUTHOR_PK">BOOK_AUTHOR_PK</A></TD>
+<TD>BOOK_ID, AUTHOR_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on BOOK_AUTHOR ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on BOOK_AUTHOR</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>BOOK_AUTHOR_AUTHOR_ID_FK</TD>
+<TD>AUTHOR_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>AUTHOR</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>BOOK_AUTHOR_BOOK_ID_FK</TD>
+<TD>BOOK_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>BOOK</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on BOOK_AUTHOR</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>BOOK_AUTHOR_AUTHID_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_AUTHOR_BOOKID_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_AUTHOR_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID, AUTHOR_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on BOOK_AUTHOR ---------</i></p>
+<p align="center"><i>--------- No privileges granted on BOOK_AUTHOR ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table BOOK_AUTHOR</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>Table</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference BOOK_AUTHOR ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab6" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab5" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab7" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLBOOK_PUBLISHER"></A></H2><H2>---------- Table BOOK_PUBLISHER ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>BOOK_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtb">2</TD>
+<TD><B>PUBLISHER_ID</B><SUB>2</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on BOOK_PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2BOOK_PUBLISHER_PK" HREF="./digitallibrary.htm#IDX1BOOK_PUBLISHER_PK">BOOK_PUBLISHER_PK</A></TD>
+<TD>BOOK_ID, PUBLISHER_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on BOOK_PUBLISHER ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on BOOK_PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHER_PUBLISHER_ID_FK</TD>
+<TD>PUBLISHER_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>PUBLISHER</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHER_BOOK_ID_FK</TD>
+<TD>BOOK_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>BOOK</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on BOOK_PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHER_AUTHID_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISHER_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHER_BOOKID_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>BOOK_PUBLISHER_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID, PUBLISHER_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on BOOK_PUBLISHER ---------</i></p>
+<p align="center"><i>--------- No privileges granted on BOOK_PUBLISHER ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table BOOK_PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>Table</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER">PUBLISHER</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference BOOK_PUBLISHER ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab7" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab6" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab8" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLCATEGORY"></A></H2><H2>---------- Table CATEGORY ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>CATEGORY_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD>CATEGORY_NAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>DESCRIPTION</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>SUPER_CATEGORY</TD>
+<TD nowrap>NUMBER</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on CATEGORY</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2CATEGORY_CATNAME_UK" HREF="./digitallibrary.htm#IDX1CATEGORY_CATNAME_UK">CATEGORY_CATNAME_UK</A></TD>
+<TD>CATEGORY_NAME</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2CATEGORY_ID_PK" HREF="./digitallibrary.htm#IDX1CATEGORY_ID_PK">CATEGORY_ID_PK</A></TD>
+<TD>CATEGORY_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on CATEGORY</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_CATEGORY">BI_CATEGORY</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSCATEGORYID&quot;.nextval into :NEW.CATEGORY_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on CATEGORY</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>CATEGORY_ID_FK</TD>
+<TD>SUPER_CATEGORY</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>CATEGORY</TD>
+<TD>&nbsp;</TD>
+<TD>NO ACTION</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on CATEGORY</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>CATEGORY_CATID_NK</TD>
+<TD>Check</TD>
+<TD>"CATEGORY_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>CATEGORY_ID</TD>
+</TR>
+<TR>
+<TD>CATEGORY_CATNAME_NK</TD>
+<TD>Check</TD>
+<TD>"CATEGORY_NAME" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>CATEGORY_NAME</TD>
+</TR>
+<TR>
+<TD>CATEGORY_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>CATEGORY_ID</TD>
+</TR>
+<TR>
+<TD>CATEGORY_CATNAME_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>CATEGORY_NAME</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on CATEGORY ---------</i></p>
+<p align="center"><i>--------- No privileges granted on CATEGORY ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table CATEGORY</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table CATEGORY</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLCATEGORY">CATEGORY</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_CATEGORY">BI_CATEGORY</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab8" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab7" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab9" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLFINE"></A></H2><H2>---------- Table FINE ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>FINE_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD>RETURN_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>FINE_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>COST</TD>
+<TD nowrap>VARCHAR2(10 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">5</TD>
+<TD>TOTAL_COST</TD>
+<TD nowrap>VARCHAR2(10 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">6</TD>
+<TD>MODE_OF_PAY</TD>
+<TD nowrap>VARCHAR2(30 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">7</TD>
+<TD>REMARK</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on FINE</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2FINE_ID_PK" HREF="./digitallibrary.htm#IDX1FINE_ID_PK">FINE_ID_PK</A></TD>
+<TD>FINE_ID</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2FINE_RETURNBOOK_ID_NK" HREF="./digitallibrary.htm#IDX1FINE_RETURNBOOK_ID_NK">FINE_RETURNBOOK_ID_NK</A></TD>
+<TD>RETURN_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on FINE</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_FINE">BI_FINE</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSFINEID&quot;.nextval into :NEW.FINE_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on FINE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>FINE_RETURNBOOK_ID_FK</TD>
+<TD>RETURN_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>RETURN_BOOK</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on FINE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>FINE_COST_NK</TD>
+<TD>Check</TD>
+<TD>"COST" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>COST</TD>
+</TR>
+<TR>
+<TD>FINE_FINEDATE_NK</TD>
+<TD>Check</TD>
+<TD>"FINE_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>FINE_DATE</TD>
+</TR>
+<TR>
+<TD>FINE_FINEID_NK</TD>
+<TD>Check</TD>
+<TD>"FINE_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>FINE_ID</TD>
+</TR>
+<TR>
+<TD>FINE_MODE_PAY_NK</TD>
+<TD>Check</TD>
+<TD>"TOTAL_COST" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>TOTAL_COST</TD>
+</TR>
+<TR>
+<TD>FINE_REMARK_NK</TD>
+<TD>Check</TD>
+<TD>"MODE_OF_PAY" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>MODE_OF_PAY</TD>
+</TR>
+<TR>
+<TD>FINE_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>FINE_ID</TD>
+</TR>
+<TR>
+<TD>FINE_RETURNBOOK_ID_NK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>RETURN_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on FINE ---------</i></p>
+<p align="center"><i>--------- No privileges granted on FINE ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table FINE</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLRETURN_BOOK">RETURN_BOOK</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table FINE</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_FINE">BI_FINE</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab9" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab8" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab10" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLISSUES_BOOK"></A></H2><H2>---------- Table ISSUES_BOOK ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>ISSUE_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>STUDENT_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>BOOK_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>ISSUE_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">5</TD>
+<TD>RETURN_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>'07/25/2016'</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">6</TD>
+<TD>STATUS</TD>
+<TD nowrap>VARCHAR2(20 BYTE)</TD>
+<TD>Y</TD>
+<TD>'issued'</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">7</TD>
+<TD>NOTES</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>'no Notes'</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2ISSUES_BOOK_ID_PK" HREF="./digitallibrary.htm#IDX1ISSUES_BOOK_ID_PK">ISSUES_BOOK_ID_PK</A></TD>
+<TD>ISSUE_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_ISSUESBOOK">BI_ISSUESBOOK</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSIDDUEWSBOOKID&quot;.nextval into :NEW.ISSUE_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_BOOK_ID_FK</TD>
+<TD>BOOK_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>BOOK</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_STUDENT_ID_FK</TD>
+<TD>STUDENT_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>STUDENT</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_BOOKID_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_ISSID_NK</TD>
+<TD>Check</TD>
+<TD>"ISSUE_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>ISSUE_ID</TD>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_STID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>ISSUE_BOOK_RETURNDATE_NK</TD>
+<TD>Check</TD>
+<TD>"RETURN_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>RETURN_DATE</TD>
+</TR>
+<TR>
+<TD>ISSUE_BOOK_STATUS_NK</TD>
+<TD>Check</TD>
+<TD>"STATUS" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STATUS</TD>
+</TR>
+<TR>
+<TD>ISUES_BOOK_ISSDATE_NK</TD>
+<TD>Check</TD>
+<TD>"ISSUE_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>ISSUE_DATE</TD>
+</TR>
+<TR>
+<TD>ISSUES_BOOK_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>ISSUE_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on ISSUES_BOOK ---------</i></p>
+<p align="center"><i>--------- No privileges granted on ISSUES_BOOK ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>Table</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table ISSUES_BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_ISSUESBOOK">BI_ISSUESBOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab10" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab9" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab11" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLLMSLOGIN"></A></H2><H2>---------- Table LMSLOGIN ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD>USERNAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>PASSWORD</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>ROLE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on LMSLOGIN</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2LMSLOGIN_PK" HREF="./digitallibrary.htm#IDX1LMSLOGIN_PK">LMSLOGIN_PK</A></TD>
+<TD>ID</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2LMSLOGIN_USERNAME_UK" HREF="./digitallibrary.htm#IDX1LMSLOGIN_USERNAME_UK">LMSLOGIN_USERNAME_UK</A></TD>
+<TD>USERNAME</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on LMSLOGIN</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_LMSLOGIN">BI_LMSLOGIN</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin   
+    select &quot;LMSLOGINID&quot;.nextval into :NEW.ID from dual; 
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on LMSLOGIN</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>LMSLOGIN_ROLE_NK</TD>
+<TD>Check</TD>
+<TD>"ROLE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>ROLE</TD>
+</TR>
+<TR>
+<TD>LMSLOGIN_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>ID</TD>
+</TR>
+<TR>
+<TD>LMSLOGIN_USERNAME_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>USERNAME</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on LMSLOGIN ---------</i></p>
+<p align="center"><i>--------- No privileges granted on LMSLOGIN ---------</i></p>
+<p align="center"><i>--------- LMSLOGIN does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table LMSLOGIN</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_LMSLOGIN">BI_LMSLOGIN</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab11" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab10" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab12" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLMAILS"></A></H2><H2>---------- Table MAILS ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>MAIL_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>STUDENT_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>TITLE</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>CONTENT</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on MAILS</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2MAILS_ID_PK" HREF="./digitallibrary.htm#IDX1MAILS_ID_PK">MAILS_ID_PK</A></TD>
+<TD>MAIL_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on MAILS</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_MAILS">BI_MAILS</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSMAILSID&quot;.nextval into :NEW.MAIL_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on MAILS</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>MAILS_STUDENT_ID_FK</TD>
+<TD>STUDENT_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>STUDENT</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on MAILS</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>MAILS_MAIL_ID_NK</TD>
+<TD>Check</TD>
+<TD>"MAIL_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>MAIL_ID</TD>
+</TR>
+<TR>
+<TD>MAILS_MESSAGE_NK</TD>
+<TD>Check</TD>
+<TD>"CONTENT" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>CONTENT</TD>
+</TR>
+<TR>
+<TD>MAILS_STUDENT_ID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>MAILS_TITLE_NK</TD>
+<TD>Check</TD>
+<TD>"TITLE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>TITLE</TD>
+</TR>
+<TR>
+<TD>MAILS_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>MAIL_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on MAILS ---------</i></p>
+<p align="center"><i>--------- No privileges granted on MAILS ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table MAILS</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table MAILS</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_MAILS">BI_MAILS</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab12" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab11" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab13" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLPUBLISHER"></A></H2><H2>---------- Table PUBLISHER ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>PUBLISH_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>PUBLISHER_NAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">3</TD>
+<TD>PUBLISHER_EMAIL</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>PUBLISHER_ADDRESS</TD>
+<TD nowrap>VARCHAR2(400 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2PUBLISHER_PUBEMAIL_UK" HREF="./digitallibrary.htm#IDX1PUBLISHER_PUBEMAIL_UK">PUBLISHER_PUBEMAIL_UK</A></TD>
+<TD>PUBLISHER_EMAIL</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2PUBLISHER_PUBID_PK" HREF="./digitallibrary.htm#IDX1PUBLISHER_PUBID_PK">PUBLISHER_PUBID_PK</A></TD>
+<TD>PUBLISH_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_PUBLISHER">BI_PUBLISHER</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSPUBLISHERID&quot;.nextval into :NEW.PUBLISH_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>PUBLISHER_PUBEMAIL_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISHER_EMAIL" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_EMAIL</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PUBLISID_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISH_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISH_ID</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PUBNAME_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISHER_NAME" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_NAME</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PUBID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISH_ID</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PUBEMAIL_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_EMAIL</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on PUBLISHER ---------</i></p>
+<p align="center"><i>--------- No privileges granted on PUBLISHER ---------</i></p>
+<p align="center"><i>--------- PUBLISHER does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table PUBLISHER</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK_PUBLISHER">BOOK_PUBLISHER</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER_PHONE">PUBLISHER_PHONE</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_PUBLISHER">BI_PUBLISHER</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab13" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab12" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab14" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLPUBLISHER_PHONE"></A></H2><H2>---------- Table PUBLISHER_PHONE ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>PUBLISHER_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD><B>PHONE_NUMBER</B><SUB>2</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on PUBLISHER_PHONE</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2PUBLISHER_PHONE_NUMBER_UK" HREF="./digitallibrary.htm#IDX1PUBLISHER_PHONE_NUMBER_UK">PUBLISHER_PHONE_NUMBER_UK</A></TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2PUBLISHER_PHONE_PK" HREF="./digitallibrary.htm#IDX1PUBLISHER_PHONE_PK">PUBLISHER_PHONE_PK</A></TD>
+<TD>PUBLISHER_ID, PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on PUBLISHER_PHONE ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on PUBLISHER_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>PUBLISHER_PHONE_ID_FK</TD>
+<TD>PUBLISHER_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>PUBLISHER</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on PUBLISHER_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>PUBLISHER_PHONE_ID_NK</TD>
+<TD>Check</TD>
+<TD>"PUBLISHER_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_ID</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PHONE_NUMBER_NK</TD>
+<TD>Check</TD>
+<TD>"PHONE_NUMBER" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PHONE_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PUBLISHER_ID, PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>PUBLISHER_PHONE_NUMBER_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on PUBLISHER_PHONE ---------</i></p>
+<p align="center"><i>--------- No privileges granted on PUBLISHER_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table PUBLISHER_PHONE</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLPUBLISHER">PUBLISHER</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference PUBLISHER_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab14" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab13" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab15" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLQUALIFICATIONS"></A></H2><H2>---------- Table QUALIFICATIONS ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>AUTHOR_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtb">2</TD>
+<TD><B>QUALIFICATION</B><SUB>2</SUB></TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on QUALIFICATIONS</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2QUALIFICATIONS_PK" HREF="./digitallibrary.htm#IDX1QUALIFICATIONS_PK">QUALIFICATIONS_PK</A></TD>
+<TD>AUTHOR_ID, QUALIFICATION</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on QUALIFICATIONS ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on QUALIFICATIONS</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>QUALIFICATIONS_ID_FK</TD>
+<TD>AUTHOR_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>AUTHOR</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on QUALIFICATIONS</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>QUALIFICATIONS_ID_NK</TD>
+<TD>Check</TD>
+<TD>"AUTHOR_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID</TD>
+</TR>
+<TR>
+<TD>QUALIFICATIONS_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>AUTHOR_ID, QUALIFICATION</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on QUALIFICATIONS ---------</i></p>
+<p align="center"><i>--------- No privileges granted on QUALIFICATIONS ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table QUALIFICATIONS</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLAUTHOR">AUTHOR</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference QUALIFICATIONS ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab15" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab14" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab16" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLRETURN_BOOK"></A></H2><H2>---------- Table RETURN_BOOK ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>RETURN_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>STUDENT_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>BOOK_ID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">4</TD>
+<TD>ISSUE_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">5</TD>
+<TD>RETURN_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">6</TD>
+<TD>RETURNED_DATE</TD>
+<TD nowrap>VARCHAR2(50 BYTE)</TD>
+<TD>Y</TD>
+<TD>'07/27/2016'</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">7</TD>
+<TD>NOTES</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>'no Notes'</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2RETURN_BOOK_ID_PK" HREF="./digitallibrary.htm#IDX1RETURN_BOOK_ID_PK">RETURN_BOOK_ID_PK</A></TD>
+<TD>RETURN_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_RETURNBOOK">BI_RETURNBOOK</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSRETURNBOOKID&quot;.nextval into :NEW.RETURN_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>RETURN_BOOK_BOOK_ID_FK</TD>
+<TD>BOOK_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>BOOK</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_STUDENT_ID_FK</TD>
+<TD>STUDENT_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>STUDENT</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>RETURN_BOOK_BOOKID_NK</TD>
+<TD>Check</TD>
+<TD>"BOOK_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>BOOK_ID</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_ISSID_NK</TD>
+<TD>Check</TD>
+<TD>"RETURN_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>RETURN_ID</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_RETDATE_NK</TD>
+<TD>Check</TD>
+<TD>"ISSUE_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>ISSUE_DATE</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_RETURNEDDATE_NK</TD>
+<TD>Check</TD>
+<TD>"RETURNED_DATE" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>RETURNED_DATE</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_STID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>RETURN_BOOK_ID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>RETURN_ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on RETURN_BOOK ---------</i></p>
+<p align="center"><i>--------- No privileges granted on RETURN_BOOK ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>Table</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLBOOK">BOOK</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table RETURN_BOOK</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLFINE">FINE</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_RETURNBOOK">BI_RETURNBOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab16" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab15" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab17" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLSTUDENT"></A></H2><H2>---------- Table STUDENT ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>STUDENT_ID</B></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD>STUDENT_NATIONALID</TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">3</TD>
+<TD>STUDENT_NAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">4</TD>
+<TD>STUDENT_EMAIL</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">5</TD>
+<TD>STUDENT_ADDRESS</TD>
+<TD nowrap>VARCHAR2(400 BYTE)</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">6</TD>
+<TD>USER_NAME</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">7</TD>
+<TD>PASSWORD</TD>
+<TD nowrap>VARCHAR2(100 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">8</TD>
+<TD>QUESTION</TD>
+<TD nowrap>VARCHAR2(400 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">9</TD>
+<TD>ANSWER</TD>
+<TD nowrap>VARCHAR2(400 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on STUDENT</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_STEMAIL_UK" HREF="./digitallibrary.htm#IDX1STUDENT_STEMAIL_UK">STUDENT_STEMAIL_UK</A></TD>
+<TD>STUDENT_EMAIL</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_STID_PK" HREF="./digitallibrary.htm#IDX1STUDENT_STID_PK">STUDENT_STID_PK</A></TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_STNATIONALID_UK" HREF="./digitallibrary.htm#IDX1STUDENT_STNATIONALID_UK">STUDENT_STNATIONALID_UK</A></TD>
+<TD>STUDENT_NATIONALID</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_USER_NAME_UQ" HREF="./digitallibrary.htm#IDX1STUDENT_USER_NAME_UQ">STUDENT_USER_NAME_UQ</A></TD>
+<TD>USER_NAME</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Triggers on STUDENT</b></CAPTION>
+<TR>
+        <TH>Trigger Name</TH>
+        <TH>Status</TH>
+        <TH>Triggering Event</TH>
+        <TH>When Clause</TH>
+        <TH>Trigger Type</TH>
+        <TH>Body</TH>
+</TR>
+<TR>
+<TD><A NAME="TRGBI_STUDENT">BI_STUDENT</A></TD>
+<TD>ENABLED</TD>
+<TD>INSERT</TD>
+<TD>&nbsp;</TD>
+<TD>BEFORE EACH ROW</TD>
+        <TD>
+          <table border="0" cellspacing="0" cellpadding="0">
+           <tr><td><pre style="font-size: 8pt; name:Courier New">
+begin  
+    select &quot;LMSSTUDENTID&quot;.nextval into :NEW.STUDENT_ID from dual;
+end;</pre></td></tr>
+          </table>
+        </TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on STUDENT</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>STUDENT_PASSWORD_NK</TD>
+<TD>Check</TD>
+<TD>"PASSWORD" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PASSWORD</TD>
+</TR>
+<TR>
+<TD>STUDENT_STEMAIL_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_EMAIL" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_EMAIL</TD>
+</TR>
+<TR>
+<TD>STUDENT_STID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>STUDENT_STNAME_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_NAME" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_NAME</TD>
+</TR>
+<TR>
+<TD>STUDENT_STNATIONALID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_NATIONALID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_NATIONALID</TD>
+</TR>
+<TR>
+<TD>STUDENT_USER_NAME_NK</TD>
+<TD>Check</TD>
+<TD>"USER_NAME" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>USER_NAME</TD>
+</TR>
+<TR>
+<TD>STUDENT_STID_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>STUDENT_STNATIONALID_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_NATIONALID</TD>
+</TR>
+<TR>
+<TD>STUDENT_STEMAIL_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_EMAIL</TD>
+</TR>
+<TR>
+<TD>STUDENT_USER_NAME_UQ</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>USER_NAME</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on STUDENT ---------</i></p>
+<p align="center"><i>--------- No privileges granted on STUDENT ---------</i></p>
+<p align="center"><i>--------- STUDENT does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference table STUDENT</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLISSUES_BOOK">ISSUES_BOOK</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLMAILS">MAILS</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLRETURN_BOOK">RETURN_BOOK</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT_PHONE">STUDENT_PHONE</A></TD>
+<TD>Table (FK)</TD>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_STUDENT">BI_STUDENT</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab17" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab16" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab18" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLSTUDENT_PHONE"></A></H2><H2>---------- Table STUDENT_PHONE ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>STUDENT_ID</B><SUB>1</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rtr">2</TD>
+<TD><B>PHONE_NUMBER</B><SUB>2</SUB></TD>
+<TD nowrap>NUMBER</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on STUDENT_PHONE</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_PHONE_NUMBER_UK" HREF="./digitallibrary.htm#IDX1STUDENT_PHONE_NUMBER_UK">STUDENT_PHONE_NUMBER_UK</A></TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2STUDENT_PHONE_PK" HREF="./digitallibrary.htm#IDX1STUDENT_PHONE_PK">STUDENT_PHONE_PK</A></TD>
+<TD>STUDENT_ID, PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on STUDENT_PHONE ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Foreign Key Constraints on STUDENT_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Columns</TH>
+        <TH>Ref Table Owner</TH>
+        <TH>Ref Table Name</TH>
+        <TH>Ref Columns</TH>
+        <TH>Delete Rule</TH>
+        <TH>Status</TH>
+        <TH>Deferrable</TH>
+        <TH>Deferred</TH>
+</TR>
+<TR>
+<TD>STUDENT_PHONE_ID_FK</TD>
+<TD>STUDENT_ID</TD>
+<TD>DIGITALLIBRARY</TD>
+<TD>STUDENT</TD>
+<TD>&nbsp;</TD>
+<TD>CASCADE</TD>
+<TD>ENABLED</TD>
+<TD>No</TD>
+<TD>No</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on STUDENT_PHONE</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>STUDENT_PHONE_ID_NK</TD>
+<TD>Check</TD>
+<TD>"STUDENT_ID" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID</TD>
+</TR>
+<TR>
+<TD>STUDENT_PHONE_NUMBER_NK</TD>
+<TD>Check</TD>
+<TD>"PHONE_NUMBER" IS NOT NULL</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>STUDENT_PHONE_PK</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>STUDENT_ID, PHONE_NUMBER</TD>
+</TR>
+<TR>
+<TD>STUDENT_PHONE_NUMBER_UK</TD>
+<TD>Unique</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>PHONE_NUMBER</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on STUDENT_PHONE ---------</i></p>
+<p align="center"><i>--------- No privileges granted on STUDENT_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects referenced by table STUDENT_PHONE</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TBLSTUDENT">STUDENT</A></TD>
+<TD>Table</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No objects reference STUDENT_PHONE ---------</i></p>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<A HREF="#Tables">Tables</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="tab18" href="#tab1"  title="First Table"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#tab17" title="Previous Table"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#tab19" title="Next Table"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#tab18" title="Last Table"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="TBLTEST"></A></H2><H2>---------- Table TEST ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Col #</TH>
+        <TH>Column Name</TH>
+        <TH>Data Type</TH>
+        <TH>Not Null?</TH>
+        <TH>Data Def.</TH>
+        <TH>Comments</TH>
+</TR>
+<TR>
+<TD class="rtr">1</TD>
+<TD><B>ID</B></TD>
+<TD nowrap>VARCHAR2(15 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR>
+<TD class="rt">2</TD>
+<TD>PASSWORD</TD>
+<TD nowrap>VARCHAR2(4000 BYTE)</TD>
+<TD>Y</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Indexes on TEST</b></CAPTION>
+<TR>
+        <TH>Uniqueness</TH>
+        <TH>Index Name</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>UNIQUE</TD>
+<TD><A NAME="IDX2TEST_CON" HREF="./digitallibrary.htm#IDX1TEST_CON">TEST_CON</A></TD>
+<TD>ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No Triggers on TEST ---------</i></p>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>PK, UK, &amp; Check Constraints on TEST</b></CAPTION>
+<TR>
+        <TH>Name</TH>
+        <TH>Type</TH>
+        <TH>Condition</TH>
+        <TH>Status</TH>
+        <TH>Columns</TH>
+</TR>
+<TR>
+<TD>TEST_CON</TD>
+<TD>Primary Key</TD>
+<TD>&nbsp;</TD>
+<TD>ENABLED</TD>
+<TD>ID</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<p align="center"><i>--------- No Policies on TEST ---------</i></p>
+<p align="center"><i>--------- No privileges granted on TEST ---------</i></p>
+<p align="center"><i>--------- TEST does not reference any objects ---------</i></p>
+<p align="center"><i>--------- No objects reference TEST ---------</i></p>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc1" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc0" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc2" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSADDRESSID"></A></H2><H2>---------- Sequence LMSADDRESSID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>100</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSADDRESSID ---------</i></p>
+<p align="center"><i>--------- LMSADDRESSID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSADDRESSID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_ADDRESS">BI_ADDRESS</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc2" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc1" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc3" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSAUTHORID"></A></H2><H2>---------- Sequence LMSAUTHORID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>132</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSAUTHORID ---------</i></p>
+<p align="center"><i>--------- LMSAUTHORID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSAUTHORID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_AUTHOR">BI_AUTHOR</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc3" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc2" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc4" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSBOOKID"></A></H2><H2>---------- Sequence LMSBOOKID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>1121</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSBOOKID ---------</i></p>
+<p align="center"><i>--------- LMSBOOKID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSBOOKID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_BOOK">BI_BOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc4" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc3" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc5" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSCATEGORYID"></A></H2><H2>---------- Sequence LMSCATEGORYID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>140</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSCATEGORYID ---------</i></p>
+<p align="center"><i>--------- LMSCATEGORYID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSCATEGORYID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_CATEGORY">BI_CATEGORY</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc5" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc4" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc6" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSFINEID"></A></H2><H2>---------- Sequence LMSFINEID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>10014</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSFINEID ---------</i></p>
+<p align="center"><i>--------- LMSFINEID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSFINEID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_FINE">BI_FINE</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc6" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc5" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc7" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSIDDUEWSBOOKID"></A></H2><H2>---------- Sequence LMSIDDUEWSBOOKID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>1050</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSIDDUEWSBOOKID ---------</i></p>
+<p align="center"><i>--------- LMSIDDUEWSBOOKID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSIDDUEWSBOOKID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_ISSUESBOOK">BI_ISSUESBOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc7" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc6" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc8" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSLOGINID"></A></H2><H2>---------- Sequence LMSLOGINID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>101</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSLOGINID ---------</i></p>
+<p align="center"><i>--------- LMSLOGINID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSLOGINID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_LMSLOGIN">BI_LMSLOGIN</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc8" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc7" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc9" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSMAILSID"></A></H2><H2>---------- Sequence LMSMAILSID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>100</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSMAILSID ---------</i></p>
+<p align="center"><i>--------- LMSMAILSID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSMAILSID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_MAILS">BI_MAILS</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc9" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc8" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc10" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSPUBLISHERID"></A></H2><H2>---------- Sequence LMSPUBLISHERID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>106</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSPUBLISHERID ---------</i></p>
+<p align="center"><i>--------- LMSPUBLISHERID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSPUBLISHERID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_PUBLISHER">BI_PUBLISHER</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc10" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc9" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc11" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSRETURNBOOKID"></A></H2><H2>---------- Sequence LMSRETURNBOOKID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>1049</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSRETURNBOOKID ---------</i></p>
+<p align="center"><i>--------- LMSRETURNBOOKID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSRETURNBOOKID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_RETURNBOOK">BI_RETURNBOOK</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>&nbsp;</P>
+<A HREF="#Sequences">Sequences</A>
+<TABLE class="nav" BORDER CELLSPACING=0 CELLPADDING=0 rules="none">
+<TR>
+<TD><A name="Sqnc11" href="#Sqnc1"  title="First Sequence"><img border=0 width=16 height=16 src="first.jpg" alt="First"></A></TD>
+<TD><A href="#Sqnc10" title="Previous Sequence"><img border=0 width=16 height=16 src="back.jpg" alt="Back"></A></TD>
+<TD><A href="#Sqnc12" title="Next Sequence"><img border=0 width=16 height=16 src="next.jpg" alt="Next"></A></TD>
+<TD><A href="#Sqnc11" title="Last Sequence"><img border=0 width=16 height=16 src="last.jpg" alt="Last"></A></TD>
+</TR>
+</TABLE>
+<CENTER>
+<H2><A NAME="SEQLMSSTUDENTID"></A></H2><H2>---------- Sequence LMSSTUDENTID ----------</H2>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<TR>
+        <TH>Min Value</TH>
+        <TH>Max Value</TH>
+        <TH>Increment By</TH>
+        <TH>Cycle Flag</TH>
+        <TH>Order Flag</TH>
+        <TH>Cache Size</TH>
+        <TH>Last Number</TH>
+</TR>
+<TR>
+<TD>1</TD>
+<TD>999999999999999999999999999</TD>
+<TD class="rt">1</TD>
+<TD>No</TD>
+<TD>Yes</TD>
+<TD class="rt">0</TD>
+<TD>1102</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p align="center"><i>--------- No privileges granted on LMSSTUDENTID ---------</i></p>
+<p align="center"><i>--------- LMSSTUDENTID does not reference any objects ---------</i></p>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=2>
+<CAPTION><b>Objects which reference sequence LMSSTUDENTID</b></CAPTION>
+<TR>
+        <TH>Object Owner</TH>
+        <TH>Object Name</TH>
+        <TH>Object Type</TH>
+</TR>
+<TR>
+<TD>DIGITALLIBRARY</TD>
+<TD><A HREF="#TRGBI_STUDENT">BI_STUDENT</A></TD>
+<TD>Trigger</TD>
+</TR>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
